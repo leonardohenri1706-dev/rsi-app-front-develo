@@ -1,0 +1,381 @@
+{
+  "Navigation": {
+    "GoBack": "Voltar",
+    "Next": "Próximo",
+    "Send": "Enviar"
+  },
+  "General": {
+    "Yes": "Sim",
+    "No": "Não",
+    "NotLoggedInError": "Você precisa estar logado para acessar essa página!"
+  },
+  "Components": {
+    "PageLayout": {
+      "Menu": {
+        "Index": "Índice"
+      }
+    },
+    "RapidSequenceInductionTips": {
+      "Attention": {
+        "Title": "Atenção:",
+        "Content": [
+          "Reduzir doses se risco hipotensão",
+          "Hipnóticos podem ter efeito menor que 10 minutos (Refazer dose?)"
+        ]
+      },
+      "Caution": {
+        "Title": "Cuidado:",
+        "Content": [
+          "Paciente que acorda e faz respiração forçada com glote fechada pode fazer edema agudo de pressão negativa"
+        ]
+      }
+    }
+  },
+  "Pages": {
+    "AboutTheAuthor": {
+      "Name": "Plínio Holanda - Anestesista"
+    },
+    "AfterAnesthesicInduction": {
+      "Content": "Intubação traqueal – máximo 3 tentativas (videolaringoscópio,\nlaringoscópio tradicional, MacCoy). Capnógrafo disponível?​",
+      "FlowChartQuestion": "Sucesso na IOT?",
+      "Yes": "Sim",
+      "No": "Não",
+      "Respirator": "Respirador"
+    },
+    "AwakeIntubation": {
+      "NotSuccessful": "Insucesso?",
+      "ListItems": {
+        "0": "O₂ nasal 5 L/min. Catéter de alto fluxo?",
+        "1": "Atropina 0.25mg",
+        "2": "Remifentanil 1-3ng/ml ou midazolam 0.5mg/vez, dexmedetomidina 0.5μg/kg/h em 10'",
+        "3": "Lidocaína spray em vias aéreas até 9mg/kg",
+        "4": "Bloqueios como transcrico e laríngeo superior?"
+      }
+    },
+    "CervicalAccess": {
+      "Cricotireoidostomia": "Cricotireoidostomia (não definitivo)",
+      "Traqueostomia": "Traqueostomia (definitivo)",
+      "SeeTheVideo": "Veja o vídeo",
+      "ListItems": {
+        "0": "Técnica lâmina de bisturi-bougie-tubo traqueal 6,0mm​",
+        "1": "Técnica por punção​"
+      }
+    },
+    "Cover": {
+      "Title": "Manejo de vias aéreas"
+    },
+    "DifficultIntubation": {
+      "Question": "IOT difícil provável?"
+    },
+    "DifficultVentilation": {
+      "Question": "Ventilação difícil provável?"
+    },
+    "FlowChartGeneralVision": {
+      "Content": "Fluxograma - Visão Geral"
+    },
+    "ForgotPassword": {
+      "Input": {
+        "Name": {
+          "Label": "E-mail *",
+          "Placeholder": "Preencha seu e-mail"
+        }
+      },
+      "ErrorMessages": {
+        "USER_DOES_NOT_EXIST": "Não existe um usuário com esse e-mail",
+        "EMAIL_CANNOT_BE_EMPTY": "O e-mail não pode ser vazio"
+      },
+      "Success": "E-mail de recuperação de senha enviado! Redirecionando para login...",
+      "Pending": "Enviando e-mail de recuperação de senha...",
+      "DefaultErrorMessage": "Falha ao enviar e-mail de recuperação de senha!"
+    },
+    "InternationalRecommendations": {
+      "Recommendations": {
+        "1": "Duas ou três tentativas com diferentes laringoscópios: comum,\nvideolaringoscópio, etc",
+        "2": "Se falha, duas ou três tentativas com máscaras laríngeas diferentes"
+      },
+      "Situations": {
+        "Title": "Situações",
+        "1": "Ventilação possível: parar e pensar",
+        "2": "Ventilação impossível: acesso cervical (cricotireoidostomia ou\ntraqueostomia)"
+      }
+    },
+    "LaryngealMask": {
+      "Content": "3 tentativas com modelos/tamanhos diferentes​",
+      "Question": "Resultado após máscara laríngea?",
+      "Success": "Sucesso ou insucesso com boa ventilação por máscara",
+      "StopAndThink": "Parar e pensar",
+      "Failure": "Insucesso com não-ventilo, não-intubo"
+    },
+    "Login": {
+      "Input": {
+        "Email": {
+          "Label": "E-mail *",
+          "Placeholder": "Preencha seu e-mail"
+        },
+        "Password": {
+          "Label": "Senha *",
+          "Placeholder": "Preencha sua senha"
+        }
+      },
+      "ErrorMessages": {
+        "USER_DOES_NOT_EXIST": "Não existe um usuário com esse e-mail",
+        "INVALID_PASSWORD": "Senha inválida"
+      },
+      "ValidationErrors": {
+        "EmailRequired": "E-mail é obrigatório",
+        "PasswordRequired": "Senha é obrigatória"
+      },
+      "Success": "Login realizado com sucesso! Redirecionando...",
+      "Pending": "Realizando Login...",
+      "DefaultErrorMessage": "Falha ao realizar login!",
+      "Buttons": {
+        "RecoverPassword": "Recuperar Senha",
+        "Register": "Cadastro",
+        "Login": "Entrar"
+      }
+    },
+    "NewPassword": {
+      "Input": {
+        "Password": {
+          "Label": "Senha *",
+          "Placeholder": "Preencha sua nova senha"
+        },
+        "PasswordConfirmation": {
+          "Label": "Confirmação de Senha *",
+          "Placeholder": "Confirme sua nova senha"
+        }
+      },
+      "ErrorMessages": {
+        "USER_DOES_NOT_EXIST": "Não existe um usuário com esse e-mail"
+      },
+      "ValidationErrors": {
+        "InvalidToken": "Link inválido! Solicite novamente o envio do e-mail na página de recuperar senha",
+        "PasswordRequired": "Senha é obrigatória",
+        "PasswordConfirmationRequired": "Confirmação de senha é obrigatória",
+        "PasswordsDoNotMatch": "As senhas não conferem",
+        "PasswordTooShort": "A senha deve ter no mínimo 6 caracteres"
+      },
+      "Success": "Senha alterada com sucesso! Redirecionando para a tela de login...",
+      "Pending": "Alterando senha...",
+      "DefaultErrorMessage": "Falha ao alterar senha!",
+      "Buttons": {
+        "Save": "Salvar"
+      }
+    },
+    "PatientType": {
+      "Buttons": {
+        "ICU": "Paciente UTI",
+        "NotICU": "Paciente Não UTI"
+      }
+    },
+    "Positioning": {
+      "Images": {
+        "1": {
+          "Label": "Posição Olfativa",
+          "Caption": "Travesseiro na região occipital sempre"
+        },
+        "2": {
+          "Label": "Posição Rampa",
+          "Caption": "Obesos e grávidas"
+        }
+      }
+    },
+    "RapidSequenceInduction": {
+      "ListItems": {
+        "1": "O₂ nasal 3L / min - dormiu? - 15 L/min",
+        "2": "Dorso + 30°",
+        "3": "Pré-oxigenação 10-15L por 5'",
+        "4": "Drogas IV: alfentanil 15μg/kg ou fentanil 3 μg/kg + etomidato 0,3 mg/kg ou ketamina 1 mg/kg + rocurônio 0,9-1,2 mg/kg ou succinilcolina 1 mg/kg. Risco de hipotensão!!! Acordou? Repetir 1/3 da dose.",
+        "5": "Evitar ventilação sob máscara",
+        "6": "Selick???",
+        "7": "Intubação traqueal (IOT) 3x; máscara laríngea (ML) 3x; crico se dessaturação​"
+      }
+    },
+    "RapidSequenceInductionTips": {
+      "Doses": {
+        "Title": "Doses para pacientes com 70kg:",
+        "1": "Alfentanil 15μg/kg (1.5ml) EV",
+        "2": "Etomidato 0,3mg/kg (10ml) EV",
+        "3": "Rocurônio 0.9mg/kg (7ml) EV"
+      },
+      "Alternatives": {
+        "Title": "Alternativas:",
+        "1": "Fentanil 2μg/kg (3ml)",
+        "2": "Cetamina 1.5mg/kg (2ml)",
+        "3": "Succinilcolina 1.5mg/kg (100μg)"
+      }
+    },
+    "Registration": {
+      "Input": {
+        "Name": {
+          "Label": "Nome *",
+          "Placeholder": "Preencha seu nome"
+        },
+        "Email": {
+          "Label": "E-mail *",
+          "Placeholder": "Preencha seu e-mail"
+        },
+        "Password": {
+          "Label": "Senha *",
+          "Placeholder": "Preencha sua nova senha"
+        },
+        "PasswordConfirmation": {
+          "Label": "Confirmação de Senha *",
+          "Placeholder": "Confirme sua nova senha"
+        }
+      },
+      "IntubationExperience": {
+        "Label": "Experiência com intubação",
+        "Placeholder": "Selecione uma opção",
+        "Options": {
+          "LessThan20": "Menos de 20",
+          "Between20And50": "20 a 50",
+          "MoreThan50": "Mais de 50"
+        }
+      },
+      "ErrorMessages": {
+        "USER_WITH_EMAIL_EXISTS": "Já existe um usuário com esse e-mail"
+      },
+      "ValidationErrors": {
+        "EmailRequired": "E-mail é obrigatório",
+        "NameRequired": "Nome é obrigatório",
+        "PasswordRequired": "Senha é obrigatória",
+        "PasswordConfirmationRequired": "Confirmação de senha é obrigatória",
+        "PasswordsDoNotMatch": "As senhas não conferem",
+        "PasswordTooShort": "A senha deve ter no mínimo 6 caracteres",
+        "IntubationExperienceRequired": "Experiência com intubação é obrigatória"
+      },
+      "Success": "Cadastro realizado com sucesso! Redirecionando...",
+      "Pending": "Realizando cadastro...",
+      "DefaultErrorMessage": "Falha ao realizar cadastro!",
+      "Buttons": {
+        "Save": "Salvar"
+      }
+    },
+    "RespiratoryTractCheckUp": {
+      "Questions": {
+        "1": {
+          "Label": "Histórico de intubação difícil",
+          "Options": {
+            "1": "Sim",
+            "2": "Não"
+          }
+        },
+        "2": {
+          "Label": "Histórico de apneia do sono",
+          "Options": {
+            "1": "Sim",
+            "2": "Não"
+          }
+        },
+        "3": {
+          "Label": "Abertura de boca",
+          "Options": {
+            "1": "Mais de 3cm",
+            "2": "Menos de 3cm"
+          }
+        },
+        "4": {
+          "Label": "Histórico de intubação difícil",
+          "Options": {
+            "1": "Sim",
+            "2": "Não"
+          }
+        },
+        "5": {
+          "Label": "Extensão cervical",
+          "Options": {
+            "1": "Maior que 90°",
+            "2": "Menor que 90°"
+          }
+        }
+      }
+    },
+    "RespiratoryTractCheckUpImages": {
+      "1": {
+        "Label": "Mallampati IV"
+      },
+      "2": {
+        "Label": "Micrognatia"
+      },
+      "3": {
+        "Label": "Extensão ruim"
+      },
+      "4": {
+        "Label": "Abertura de boca ruim"
+      }
+    },
+    "RespiratoryTractCheckUpMacocha": {
+      "TableData": {
+        "1": "M: Mallampati II ou IV",
+        "2": "A: Apneia obstrutiva do sono",
+        "3": "C: Cervical com má extensão",
+        "4": "O: Abertura de boca menor que 3 cm",
+        "5": "C: Coma",
+        "6": "H: Hipóxia severa (80%)",
+        "7": "A: Não-anestesista",
+        "Header": {
+          "Parameter": "Parâmetro",
+          "Score": "Pontuação",
+          "Sum": "SOMA"
+        },
+        "Footer": {
+          "IOT": "*IOT = Intubação orotraqueal"
+        }
+      }
+    },
+    "RespiratoryTractCheckUpMallampati": {
+      "Label": "Classificação de Mallampati",
+      "Options": {
+        "1": {
+          "Caption": "Palato mole, fauce, úvula e pilares visíveis",
+          "Label": "Classe I"
+        },
+        "2": {
+          "Caption": "Palato mole, fauce e úvula visíveis",
+          "Label": "Classe II"
+        },
+        "3": {
+          "Caption": "Palato mole e base da úvula visíveis",
+          "Label": "Classe III"
+        },
+        "4": {
+          "Caption": "Apenas palato duro visível",
+          "Label": "Classe IV"
+        }
+      }
+    },
+    "VortexScheme": {
+      "Label": "Esquema Vortex",
+      "Descriptionn": "Esquema que busca usar máscara facial, IOT e máscara laríngea para\nevitar acesso cervical",
+      "Items": {
+        "1": "Máscara facial",
+        "2": "Máscara laríngea",
+        "3": "Tubo traqueal",
+        "4": "Traqueostomia"
+      }
+    },
+    "WhatAboutAnesthetists": {
+      "Content": "Não há grandes diferenças, apenas em cirurgias programadas a\nintubação pode ser cancelada (diferente de insuficiência\nrespiratória, parada cardíaca, etc) através da reversão de drogas\nutilizadas. A indução em sequência rápida não é obrigatória em\npacientes compensados"
+    }
+  },
+  "Index": {
+    "ForgotPassword": "Recuperar senha",
+    "NewPassword": "Mudar senha",
+    "Registration": "Cadastro",
+    "Cover": "Capa",
+    "Login": "Login",
+    "DifficultIntubation": "Intubação orotraqueal (IOT)",
+    "DifficultVentilation": "Ventilação sob máscara",
+    "RapidSequenceInduction": "Indução em sequência rápida - Como fazer",
+    "AwakeIntubation": "Intubação acordado - Como fazer",
+    "AfterAnesthesicInduction": "Após indução anestésica",
+    "LaryngealMask": "Tentativa com máscara laríngea",
+    "CervicalAccess": "Acesso Cervical",
+    "CervicalAccessVideo": "Acesso Cervical - Vídeo",
+    "SummaryVideo": "Vídeo resumo",
+    "WhatAboutAnesthetists": "E para anestesistas?",
+    "AboutTheAuthor": "Sobre o autor",
+    "References": "Referências"
+  }
+}
