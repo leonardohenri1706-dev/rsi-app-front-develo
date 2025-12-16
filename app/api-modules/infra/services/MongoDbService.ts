@@ -1,5 +1,5 @@
 import type { Db } from "mongodb";
-import { MongoClient } from "mongodb";
+import { MongoClient, ServerApiVersion } from "mongodb";
 
 const { MONGODB_URI = "" } = process.env;
 
@@ -13,7 +13,13 @@ export class MongoDbService {
       if (!MONGODB_URI) {
         throw new Error("MONGODB_URI is not defined in environment variables.");
       }
-      client = new MongoClient(MONGODB_URI);
+      client = new MongoClient(MONGODB_URI, {
+        serverApi: {
+          version: ServerApiVersion.v1,
+          strict: true,
+          deprecationErrors: true,
+        },
+      });
       await client.connect();
     }
     return client.db(dbName);
