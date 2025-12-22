@@ -11,7 +11,7 @@ export class RegistrationUseCase {
     private readonly userRepository: UserRepository,
     private readonly cryptoService: CryptoService,
     private readonly jwtService: JwtService
-  ) {}
+  ) { }
 
   public async execute(input: RegistrationBody): Promise<Response> {
     const { password: unencryptedPassword, email, name } = input;
@@ -54,7 +54,7 @@ export class RegistrationUseCase {
     } = createdUser;
 
     const token = this.jwtService.generateToken({
-      user_id: String(user._id),
+      user_id: createdUser.id!,
       email: user.email,
     });
 

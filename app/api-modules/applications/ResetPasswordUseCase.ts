@@ -11,7 +11,7 @@ export class ResetPasswordUseCase {
     private readonly userRepository: UserRepository,
     private readonly cryptoService: CryptoService,
     private readonly JwtService: JwtService
-  ) {}
+  ) { }
 
   public async execute(input: ResetPasswordBody): Promise<Return> {
     const { token, password: uncryptedNewPassword } = input;
@@ -36,7 +36,7 @@ export class ResetPasswordUseCase {
 
     const data: Partial<User> = { password, cryptographic_salt };
 
-    await this.userRepository.update(user._id, data);
+    await this.userRepository.update(user.id!, data);
 
     return { message: "Password successfully updated!" };
   }

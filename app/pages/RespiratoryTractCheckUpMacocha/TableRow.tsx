@@ -1,5 +1,3 @@
-import React from "react";
-
 interface Props {
   Input?: React.ReactNode;
   centered?: boolean;

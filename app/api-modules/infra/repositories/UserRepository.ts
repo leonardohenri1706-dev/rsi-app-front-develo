@@ -1,23 +1,40 @@
-import type { Collection, Db } from "mongodb";
-
+import { supabase } from "../services";
 import type { User } from "../../domain/entities/User";
 
 export class UserRepository {
-  private collection: Collection<User>;
+  constructor() { }
 
-  constructor(db: Db) {
-    this.collection = db.collection<User>("users");
-  }
+  public async findByEmail(email: string): Promise<User | null> {
+    const { data, error } = await supabase
+      .from("users")
+      .select("*")
+      .eq("email", email)
+      .single();
 
-  public async findByEmail(email: string) {
-    return this.collection.findOne({ email });
+    if (error || !data) return null;
+    return data as User;
   }
 
   public async create(data: Partial<User>) {
-    return this.collection.insertOne(data as User);
+    const { data: created, error } = await supabase
+      .from("users")
+      .insert(data)
+      .select()
+      .single();
+
+    if (error) throw new Error(error.message);
+    return created;
   }
 
-  public async update(_id: number, data: Partial<User>) {
-    return this.collection.updateOne({ _id }, { $set: data });
+  public async update(id: string, data: Partial<User>) {
+    const { data: updated, error } = await supabase
+      .from("users")
+      .update(data)
+      .eq("id", id)
+      .select()
+      .single();
+
+    if (error) throw new Error(error.message);
+    return updated;
   }
 }

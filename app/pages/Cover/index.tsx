@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect } from "react";
 
 import { LogoOnClipboard } from "@/app/components/PageLayout/LogoOnClipboard";
@@ -20,6 +22,11 @@ export const Cover: React.FC = () => {
       <BaseLayout.Content
         className={`!pt-[18rem] transition-opacity animate-fade-out`}
       >
+        {/* 
+          Para trocar a imagem principal da Home, você pode modificar o 'src' do componente Image 
+          dentro de 'LogoOnClipboard' ou substituir o componente 'LogoOnClipboard' por outro 
+          componente de imagem aqui. Atualmente, ele usa '/logo_full.svg'.
+        */}
         <LogoOnClipboard size={500} show />
 
         <p className="text-xl font-bold text-center text-gray-700">

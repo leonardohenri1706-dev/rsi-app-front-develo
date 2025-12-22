@@ -1,5 +1,4 @@
 import {
-  MongoDbService,
   UserRepository,
   CryptoService,
   JwtService,
@@ -9,7 +8,7 @@ import { RegistrationUseCase } from "../applications";
 export class RegistrationComposer {
   static async compose() {
     return new RegistrationUseCase(
-      new UserRepository(await MongoDbService.getDb()),
+      new UserRepository(),
       new CryptoService(),
       new JwtService()
     );

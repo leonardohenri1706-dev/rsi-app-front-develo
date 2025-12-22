@@ -10,7 +10,7 @@ export class LoginUseCase {
     private readonly userRepository: UserRepository,
     private readonly cryptoService: CryptoService,
     private readonly jwtService: JwtService
-  ) {}
+  ) { }
 
   public async execute(input: LoginBody): Promise<Return> {
     const { password, email } = input;
@@ -41,7 +41,7 @@ export class LoginUseCase {
     }
 
     const token = this.jwtService.generateToken({
-      user_id: String(user._id),
+      user_id: user.id!,
       email: user.email,
     });
     return { token };

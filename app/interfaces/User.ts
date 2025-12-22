@@ -5,7 +5,8 @@ export enum IntubationExperience {
 }
 
 export interface User {
-  readonly _id: number;
+  readonly id: string;
+  readonly _id?: string;
   email: string;
   name: string;
   intubation_experience: IntubationExperience;

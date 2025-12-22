@@ -22,8 +22,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={inter.className}>
-        <LanguageSwitcher />
-        <Providers>{children}</Providers>
+        <Providers>
+          <LanguageSwitcher />
+          {children}
+        </Providers>
       </body>
     </html>
   );

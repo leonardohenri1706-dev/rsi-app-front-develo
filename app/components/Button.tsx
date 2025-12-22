@@ -1,7 +1,7 @@
 import React from "react";
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  label: string | React.ReactNode;
+  label: React.ReactNode;
 }
 
 export const Button: React.FC<Props> = ({ label, ...props }) => (

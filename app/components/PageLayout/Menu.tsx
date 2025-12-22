@@ -1,3 +1,5 @@
+"use client";
+
 import { usePageContext } from "@/app/store";
 import { useWindowSize } from "@/app/hooks";
 import pages from "@/app/routes";
@@ -15,7 +17,9 @@ const getMenuOpenClassName = (
   if (isMediumOrSmaller)
     return menuIsOpen ? "translate-x-0" : "-translate-x-full";
 
-  return menuIsOpen ? "-translate-x-full" : "translate-x-0";
+  // On desktop, the menu should be visible when open, and hidden when closed.
+  // The current logic was hiding it when open on desktop.
+  return menuIsOpen ? "translate-x-0" : "-translate-x-full";
 };
 
 export const Menu: React.FC = () => {
@@ -29,7 +33,8 @@ export const Menu: React.FC = () => {
     <MenuIndexItem page={page} key={page.path} />
   ));
 
-  const zIndexClassName = isMediumOrSmaller ? "!z-[5]" : "!z-[1]";
+  // Adjust z-index for desktop to ensure it's above other content when open
+  const zIndexClassName = isMediumOrSmaller ? "!z-[5]" : "!z-[4]"; // Increased z-index for desktop menu
   const paddingRightClassName = isMediumOrSmaller ? "pr-[1rem]" : "pr-[5rem]";
 
   return (

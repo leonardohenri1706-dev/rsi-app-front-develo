@@ -1,6 +1,8 @@
 {
-    "framework": "nextjs",
-    "buildCommand": "pnpm build",
-    "installCommand": "pnpm install",
-    "outputDirectory": ".next"
+    "rewrites": [
+        {
+            "source": "/((?!api/|_next/|static/|locales/|.*\\..*).*)",
+            "destination": "/"
+        }
+    ]
 }

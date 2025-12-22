@@ -5,7 +5,8 @@ export enum IntubationExperience {
 }
 
 export interface User {
-  readonly _id: number;
+  readonly id?: string;
+  readonly _id?: string; // Kept for backward compatibility during refactor, but optional
   email: string;
   password: string;
   name: string;

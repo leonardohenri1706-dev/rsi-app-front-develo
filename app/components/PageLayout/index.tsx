@@ -17,7 +17,8 @@ import { useTranslation } from "react-i18next";
 interface Props {
   children: React.ReactNode;
   isPrivate: boolean;
-  title: string;
+  title?: string;
+  titleKey?: string;
 }
 
 const PageLayoutWithoutContext: React.FC<Props> = ({ isPrivate, children }) => {
@@ -56,8 +57,13 @@ const PageLayoutWithoutContext: React.FC<Props> = ({ isPrivate, children }) => {
   );
 };
 
-export const PageLayout: React.FC<Props> = (props) => (
-  <PageContextProvider title={props.title}>
-    <PageLayoutWithoutContext {...props} />
-  </PageContextProvider>
-);
+export const PageLayout: React.FC<Props> = (props) => {
+  const { t } = useTranslation("common");
+  const title = props.title || (props.titleKey ? t(props.titleKey) : "");
+
+  return (
+    <PageContextProvider title={title}>
+      <PageLayoutWithoutContext {...props} title={title} />
+    </PageContextProvider>
+  );
+};

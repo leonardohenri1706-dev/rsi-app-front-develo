@@ -20,12 +20,6 @@ export class SendMailService {
     subject: string,
     html: string
   ): Promise<void> {
-    if (!user || !pass) {
-      console.warn(
-        "SMTP credentials (SMTP_MAIL or SMTP_PASSWORD) are missing. Email sending is skipped."
-      );
-      return;
-    }
     await this.transporter.sendMail({ from: user, to, subject, html });
   }
 }

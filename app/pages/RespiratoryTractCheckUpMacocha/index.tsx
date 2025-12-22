@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import { BaseLayout, Button } from "@/app/components";
 import { useRoutes } from "@/app/hooks";
