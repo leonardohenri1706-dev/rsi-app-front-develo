@@ -1,5 +1,5 @@
 interface Props {
-  Input?: JSX.Element;
+  Input?: React.ReactNode;
   centered?: boolean;
   parameter: string;
   score?: string;

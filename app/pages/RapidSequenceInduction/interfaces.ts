@@ -1,4 +1,6 @@
+import React from "react";
+
 export interface ListItemProps {
   text: string;
-  ExtraContent?: JSX.Element;
+  ExtraContent?: React.ReactNode;
 }

@@ -12,7 +12,7 @@ export class ForgotPasswordUseCase {
     private readonly userRepository: UserRepository,
     private readonly sendMailService: SendMailService,
     private readonly JwtService: JwtService
-  ) {}
+  ) { }
 
   public async execute(input: ForgotPasswordBody): Promise<Return> {
     const { email } = input;
@@ -28,7 +28,7 @@ export class ForgotPasswordUseCase {
     }
 
     const token = this.JwtService.generateToken({
-      user_id: String(user._id),
+      user_id: user.id!,
       email: user.email,
     });
 

@@ -1,4 +1,4 @@
 export * from "./SendMailService";
-export * from "./MongoDbService";
+export * from "./SupabaseService";
 export * from "./CryptoService";
 export * from "./JwtService";

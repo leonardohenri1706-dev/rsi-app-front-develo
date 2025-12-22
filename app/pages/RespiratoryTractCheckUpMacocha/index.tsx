@@ -1,4 +1,4 @@
-import { JSX, useState } from "react";
+import { useState } from "react";
 
 import { BaseLayout, Button } from "@/app/components";
 import { useRoutes } from "@/app/hooks";
@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 const commonClassNames = "text-center text-[1.25rem] mt-[0.5rem] font-bold";
 
-const getText = (sum: number): JSX.Element => {
+const getText = (sum: number): React.ReactNode => {
   if (sum === 0)
     return (
       <p className={`${commonClassNames} flex flex-col`}>

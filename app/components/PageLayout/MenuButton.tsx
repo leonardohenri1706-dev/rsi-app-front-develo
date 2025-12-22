@@ -1,11 +1,13 @@
+"use client";
+
 import { AiOutlineMenuFold, AiOutlineMenuUnfold } from "react-icons/ai";
 
 import { usePageContext } from "@/app/store";
 import { useWindowSize } from "@/app/hooks";
 
 const icon = {
-  true: AiOutlineMenuUnfold,
-  false: AiOutlineMenuFold,
+  true: AiOutlineMenuUnfold, // Menu is open
+  false: AiOutlineMenuFold,  // Menu is closed
 };
 
 export const MenuButton: React.FC = () => {
@@ -14,7 +16,12 @@ export const MenuButton: React.FC = () => {
 
   const onClick = () => setMenuIsOpen((old) => !old);
 
-  const iconKey = isMediumOrSmaller ? String(!menuIsOpen) : String(menuIsOpen);
+  // On mobile (isMediumOrSmaller is true), the icon shows 'unfold' when menu is closed (false)
+  // and 'fold' when menu is open (true).
+  // On desktop (isMediumOrSmaller is false), the icon shows 'fold' when menu is closed (false)
+  // and 'unfold' when menu is open (true).
+  // This logic was inverted for desktop.
+  const iconKey = String(menuIsOpen); // Simplified: true for open, false for closed
 
   const Icon = icon[iconKey as keyof typeof icon];
 

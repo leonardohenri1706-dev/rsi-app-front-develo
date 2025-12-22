@@ -6,7 +6,7 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/:any*",
+        source: "/((?!api|_next/static|_next/image|favicon.ico).*)",
         destination: "/",
       },
     ];

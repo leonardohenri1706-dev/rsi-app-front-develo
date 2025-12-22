@@ -1,5 +1,4 @@
 import {
-  MongoDbService,
   UserRepository,
   CryptoService,
   JwtService,
@@ -9,7 +8,7 @@ import { LoginUseCase } from "../applications";
 export class LoginComposer {
   static async compose() {
     return new LoginUseCase(
-      new UserRepository(await MongoDbService.getDb()),
+      new UserRepository(),
       new CryptoService(),
       new JwtService()
     );
