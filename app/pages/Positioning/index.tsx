@@ -1,3 +1,4 @@
+"use client";
 import {
   ImageWithLabelAndCaptionOption,
   BaseLayout,
@@ -60,3 +61,4 @@ export const Positioning: React.FC = () => {
     </BaseLayout.Root>
   );
 };
+

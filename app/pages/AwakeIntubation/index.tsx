@@ -1,3 +1,4 @@
+"use client";
 import { BaseLayout, Button } from "@/app/components";
 import { useTranslation } from "react-i18next";
 import { useRoutes } from "@/app/hooks";
@@ -55,3 +56,4 @@ export const AwakeIntubation: React.FC = () => {
     </BaseLayout.Root>
   );
 };
+

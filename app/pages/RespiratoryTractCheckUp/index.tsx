@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 
 import { RadioWithLabel, BaseLayout, Button } from "@/app/components";
@@ -79,3 +80,4 @@ export const RespiratoryTractCheckUp: React.FC = () => {
     </BaseLayout.Root>
   );
 };
+

@@ -9,9 +9,14 @@ import { useRoutes } from "@/app/hooks";
 import { validateData } from "../utils";
 import { useTranslation } from "react-i18next";
 
+import { useSearchParams } from "next/navigation";
+
+// ...
+
 export const useResetPassword = () => {
   const { goToLogin } = useRoutes();
   const { t } = useTranslation("common");
+  const searchParams = useSearchParams();
 
   const RegistrationErrorMessages = {
     USER_DOES_NOT_EXIST: t(
@@ -25,7 +30,7 @@ export const useResetPassword = () => {
   );
 
   const [data, setData] = useState<ResetPasswordBody | null>(() => {
-    const token = window.location.search.split("=")[1];
+    const token = searchParams.get("token");
     return { token } as ResetPasswordBody;
   });
 

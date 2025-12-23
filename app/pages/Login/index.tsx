@@ -1,3 +1,4 @@
+"use client";
 import { InputWithLabel, BaseLayout, Button } from "@/app/components";
 import { useRoutes } from "@/app/hooks";
 
@@ -51,3 +52,4 @@ export const Login: React.FC = () => {
     </BaseLayout.Root>
   );
 };
+

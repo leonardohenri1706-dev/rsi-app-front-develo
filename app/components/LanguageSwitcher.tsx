@@ -1,26 +1,32 @@
 "use client";
 
-import { useTranslation } from "react-i18next";
-// Removed Image import as we are no longer using flags
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function LanguageSwitcher() {
-  const { i18n } = useTranslation("common");
+  const pathname = usePathname();
 
-  const currentLocale = i18n.language;
+  // path starts with /pt-BR or /en usually due to middleware
+  const segments = pathname.split("/");
+  const currentLocale = segments[1] || "pt-BR";
+
+  // Logic to toggle
   const nextLocale = currentLocale === "pt-BR" ? "en" : "pt-BR";
-  const buttonText = currentLocale === "pt-BR" ? "EN" : "PT-BR"; // Display the next language to switch to
+  const buttonText = currentLocale === "pt-BR" ? "EN" : "PT-BR";
 
-  function switchLanguage() {
-    i18n.changeLanguage(nextLocale);
-  }
+  // Reconstruct path with new locale
+  // segments[0] is empty string (before first /)
+  // segments[1] is locale
+  const newPath = `/${nextLocale}${pathname.substring(currentLocale.length + 1)}`;
 
   return (
-    <button
-      onClick={switchLanguage}
-      className="fixed top-4 right-4 z-50 bg-[#62C8B8] hover:bg-[#01967F] text-white font-bold py-3 px-6 lg:py-4 lg:px-8 rounded-full shadow-lg transition-colors duration-300 ease-in-out text-base lg:text-xl"
-      aria-label="Switch language"
-    >
-      {buttonText}
-    </button>
+    <Link href={newPath} passHref>
+      <button
+        className="fixed top-4 right-4 z-50 bg-[#62C8B8] hover:bg-[#01967F] text-white font-bold py-3 px-6 lg:py-4 lg:px-8 rounded-full shadow-lg transition-colors duration-300 ease-in-out text-base lg:text-xl"
+        aria-label={`Switch to ${nextLocale === "pt-BR" ? "Portuguese" : "English"}`}
+      >
+        {buttonText}
+      </button>
+    </Link>
   );
 }

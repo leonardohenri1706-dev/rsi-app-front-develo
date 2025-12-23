@@ -1,3 +1,4 @@
+"use client";
 import {
   ImageWithLabelAndCaptionOption,
   BaseLayout,
@@ -68,3 +69,4 @@ export const RespiratoryTractCheckUpImages: React.FC = () => {
     </BaseLayout.Root>
   );
 };
+

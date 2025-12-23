@@ -7,13 +7,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prebuild": "npx tsx scripts/check-db.ts"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.2.0",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@formatjs/intl-localematcher": "^0.7.3",
     "@supabase/supabase-js": "^2.89.0",
     "@tailwindcss/postcss": "^4.1.10",
     "@types/jsonwebtoken": "^9.0.4",
@@ -23,6 +25,7 @@
     "i18next": "^25.2.1",
     "i18next-http-backend": "^3.0.2",
     "jsonwebtoken": "^9.0.2",
+    "negotiator": "^1.0.0",
     "next": "14.0.0",
     "next-i18next": "^15.4.2",
     "nodemailer": "^6.9.7",
@@ -33,9 +36,11 @@
     "react-router": "^6.17.0",
     "react-router-dom": "^6.17.0",
     "react-toastify": "^9.1.3",
+    "server-only": "^0.0.1",
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@types/negotiator": "^0.6.4",
     "@types/node": "^20.0.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",

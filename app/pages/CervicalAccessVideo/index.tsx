@@ -1,3 +1,4 @@
+"use client";
 import { useTranslation } from "react-i18next";
 
 import { BaseLayout, Button } from "@/app/components";
@@ -23,3 +24,4 @@ export const CervicalAccessVideo: React.FC = () => {
     </BaseLayout.Root>
   );
 };
+

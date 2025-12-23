@@ -1,3 +1,4 @@
+"use client";
 import { InputWithLabel, BaseLayout, Button } from "@/app/components";
 
 import { useResetPassword } from "./hooks";
@@ -38,3 +39,4 @@ export const NewPassword: React.FC = () => {
     </BaseLayout.Root>
   );
 };
+

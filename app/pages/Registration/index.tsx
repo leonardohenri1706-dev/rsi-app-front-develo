@@ -1,3 +1,4 @@
+"use client";
 import {
   InputWithLabel,
   RadioWithLabel,
@@ -82,3 +83,4 @@ export const Registration: React.FC = () => {
     </BaseLayout.Root>
   );
 };
+

@@ -1,3 +1,4 @@
+"use client";
 import { BsCameraVideo } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
 
@@ -62,3 +63,4 @@ export const CervicalAccess: React.FC = () => {
     </BaseLayout.Root>
   );
 };
+

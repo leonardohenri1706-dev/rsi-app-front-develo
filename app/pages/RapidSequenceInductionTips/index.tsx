@@ -1,3 +1,4 @@
+"use client";
 import { useTranslation } from "react-i18next";
 
 import { RapidSequenceInductionTips } from "@/app/components/RapidSequenceInductionTips";
@@ -43,3 +44,4 @@ export const RapidSequenceInductionDosesAndTips: React.FC = () => {
     </BaseLayout.Root>
   );
 };
+

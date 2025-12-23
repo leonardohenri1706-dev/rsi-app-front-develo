@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 
 import { BaseLayout, Button } from "@/app/components";
@@ -112,3 +113,4 @@ export const RespiratoryTractCheckUpMacocha: React.FC = () => {
     </BaseLayout.Root>
   );
 };
+

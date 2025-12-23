@@ -1,3 +1,4 @@
+"use client";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
@@ -45,3 +46,4 @@ export const AboutTheAuthor: React.FC = () => {
     </BaseLayout.Root>
   );
 };
+

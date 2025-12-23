@@ -1,3 +1,4 @@
+"use client";
 import { BaseLayout, Button } from "@/app/components";
 import { useRoutes } from "@/app/hooks";
 import { listItemsLabels } from "./listItemsLabels";
@@ -55,3 +56,4 @@ export const RapidSequenceInduction: React.FC = () => {
     </BaseLayout.Root>
   );
 };
+

@@ -1,3 +1,4 @@
+"use client";
 import { useTranslation } from "react-i18next";
 
 import { BaseLayout, Button, FlowChartQuestion } from "@/app/components";
@@ -52,3 +53,4 @@ export const DifficultVentilation: React.FC = () => {
     </BaseLayout.Root>
   );
 };
+

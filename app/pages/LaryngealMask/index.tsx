@@ -1,3 +1,4 @@
+"use client";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
@@ -65,3 +66,4 @@ export const LaryngealMask: React.FC = () => {
     </BaseLayout.Root>
   );
 };
+

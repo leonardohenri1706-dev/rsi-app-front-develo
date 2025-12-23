@@ -1,3 +1,4 @@
+"use client";
 import { BaseLayout, Button } from "@/app/components";
 import { useTranslation } from "react-i18next";
 
@@ -30,3 +31,4 @@ export const PatientType: React.FC = () => {
     </BaseLayout.Root>
   );
 };
+

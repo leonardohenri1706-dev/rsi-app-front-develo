@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 
 import {
@@ -77,3 +78,4 @@ export const RespiratoryTractCheckUpMallampati: React.FC = () => {
     </BaseLayout.Root>
   );
 };
+

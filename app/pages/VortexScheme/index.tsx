@@ -1,3 +1,4 @@
+"use client";
 import { BaseLayout, Button } from "@/app/components";
 import { useRoutes } from "@/app/hooks";
 import Image from "next/image";
@@ -63,3 +64,4 @@ export const VortexScheme: React.FC = () => {
     </BaseLayout.Root>
   );
 };
+

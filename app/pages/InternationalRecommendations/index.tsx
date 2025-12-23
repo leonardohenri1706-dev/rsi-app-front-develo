@@ -1,3 +1,4 @@
+"use client";
 import { BaseLayout, Button } from "@/app/components";
 import { useRoutes } from "@/app/hooks";
 import { useTranslation } from "react-i18next";
@@ -33,3 +34,4 @@ export const InternationalRecommendations: React.FC = () => {
     </BaseLayout.Root>
   );
 };
+

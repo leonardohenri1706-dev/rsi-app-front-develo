@@ -1,7 +1,5 @@
-import * as Pages from "./pages";
 
 export interface RouteProps {
-  Component: React.PropsWithChildren<any>;
   isPrivate: boolean;
   routerName: string;
   indexName?: string;
@@ -12,111 +10,37 @@ export interface RouteProps {
 
 const pages: RouteProps[] = [
   {
-    Component: Pages.ForgotPassword,
     name: "ForgotPassword",
     path: "/forgot-password",
     routerName: "goToForgotPassword",
     isPrivate: false,
   },
   {
-    Component: Pages.NewPassword,
     name: "NewPassword",
     path: "/new-password",
     routerName: "goToNewPassword",
     isPrivate: false,
   },
   {
-    Component: Pages.Registration,
     name: "Registration",
     path: "/registration",
     routerName: "goToRegistration",
     isPrivate: false,
   },
   {
-    Component: Pages.Cover,
     name: "Cover",
     path: "/",
     routerName: "goToCover",
     isPrivate: false,
   },
   {
-    Component: Pages.Login,
     name: "Login",
     path: "/login",
     routerName: "goToLogin",
     indexed: true,
     isPrivate: false,
   },
-  // {
-  //   Component: Pages.RespiratoryTractCheckUp,
-  //   indexName: "Avaliação das vias aéreas",
-  //   name: "Avaliação das vias aéreas",
-  //   path: "/respiratory-tract-check-up",
-  //   routerName: "goToRespiratoryTractCheckUp",
-  //   indexed: true,
-  //   isPrivate: true,
-  // },
-  // {
-  //   Component: Pages.RespiratoryTractCheckUpMallampati,
-  //   indexName: "Avaliação das vias aéreas - Mallampati",
-  //   name: "Avaliação das vias aéreas - Mallampati",
-  //   path: "/respiratory-tract-check-up-mallampati",
-  //   routerName: "goToRespiratoryTractCheckUpMallampati",
-  //   indexed: true,
-  //   isPrivate: true,
-  // },
-  // {
-  //   Component: Pages.RespiratoryTractCheckUpImages,
-  //   indexName: "Avaliação das vias aéreas - Imagens",
-  //   name: "Avaliação das vias aéreas - Imagens",
-  //   path: "/respiratory-tract-check-up-images",
-  //   routerName: "goToRespiratoryTractCheckUpImages",
-  //   indexed: true,
-  //   isPrivate: true,
-  // },
-  // {
-  //   Component: Pages.RespiratoryTractCheckUpMacocha,
-  //   indexName: "Avaliação das vias aéreas - MACOCHA",
-  //   name: "Avaliação das vias aéreas - MACOCHA",
-  //   path: "/respiratory-tract-check-up-macocha",
-  //   routerName: "goToRespiratoryTractCheckUpMacocha",
-  //   indexed: true,
-  //   isPrivate: true,
-  // },
-  // {
-  //   Component: Pages.Positioning,
-  //   name: "Posicionamento",
-  //   path: "/positioning",
-  //   routerName: "goToPositioning",
-  //   indexed: true,
-  //   isPrivate: true,
-  // },
-  // {
-  //   Component: Pages.InternationalRecommendations,
-  //   name: "Recomendações internacionais",
-  //   path: "/international-recommendations",
-  //   routerName: "goToInternationalRecommendations",
-  //   indexed: true,
-  //   isPrivate: true,
-  // },
-  // {
-  //   Component: Pages.VortexScheme,
-  //   name: "Esquema Vortex",
-  //   path: "/vortex-scheme",
-  //   routerName: "goToVortexScheme",
-  //   indexed: true,
-  //   isPrivate: true,
-  // },
-  // {
-  //   Component: Pages.FlowChartGeneralVision,
-  //   name: "Fluxograma - Visão Geral",
-  //   path: "/flow-chart-general-vision",
-  //   routerName: "goToFlowChartGeneralVision",
-  //   indexed: true,
-  //   isPrivate: true,
-  // },
   {
-    Component: Pages.DifficultIntubation,
     name: "DifficultIntubation",
     path: "/difficult-intubation",
     routerName: "goToDifficultIntubation",
@@ -124,7 +48,6 @@ const pages: RouteProps[] = [
     isPrivate: true,
   },
   {
-    Component: Pages.DifficultVentilation,
     name: "DifficultVentilation",
     path: "/difficult-ventilation",
     routerName: "goToDifficultVentilation",
@@ -132,7 +55,6 @@ const pages: RouteProps[] = [
     isPrivate: true,
   },
   {
-    Component: Pages.RapidSequenceInduction,
     name: "RapidSequenceInduction",
     path: "/rapid-sequence-induction",
     routerName: "goToRapidSequenceInduction",
@@ -140,7 +62,6 @@ const pages: RouteProps[] = [
     isPrivate: true,
   },
   {
-    Component: Pages.AwakeIntubation,
     name: "AwakeIntubation",
     path: "/awake-intubation",
     routerName: "goToAwakeIntubation",
@@ -148,7 +69,6 @@ const pages: RouteProps[] = [
     isPrivate: true,
   },
   {
-    Component: Pages.AfterAnesthesicInduction,
     name: "AfterAnesthesicInduction",
     path: "/after-anesthesic-induction",
     routerName: "goToAfterAnesthesicInduction",
@@ -156,7 +76,6 @@ const pages: RouteProps[] = [
     isPrivate: true,
   },
   {
-    Component: Pages.LaryngealMask,
     name: "LaryngealMask",
     path: "/laryngeal-mask",
     routerName: "goToLaryngealMask",
@@ -164,7 +83,6 @@ const pages: RouteProps[] = [
     isPrivate: true,
   },
   {
-    Component: Pages.CervicalAccess,
     name: "CervicalAccess",
     path: "/cervical-access",
     routerName: "goToCervicalAccess",
@@ -172,23 +90,13 @@ const pages: RouteProps[] = [
     isPrivate: true,
   },
   {
-    Component: Pages.CervicalAccessVideo,
     name: "CervicalAccessVideo",
     path: "/cervical-access-video",
     routerName: "goToCervicalAccessVideo",
     indexed: true,
     isPrivate: true,
   },
-  // {
-  //   Component: Pages.RapidSequenceInductionTips,
-  //   name: "Indução em sequência rápida - Doses e dicas",
-  //   path: "/rapid-sequence-induction-tips",
-  //   routerName: "goToRapidSequenceInductionTips",
-  //   indexed: true,
-  //   isPrivate: true,
-  // },
   {
-    Component: Pages.SummaryVideo,
     name: "SummaryVideo",
     path: "/summary-video",
     routerName: "goToSummaryVideo",
@@ -196,7 +104,6 @@ const pages: RouteProps[] = [
     isPrivate: true,
   },
   {
-    Component: Pages.WhatAboutAnesthetists,
     name: "WhatAboutAnesthetists",
     path: "/what-about-anesthetists",
     routerName: "goToWhatAboutAnesthetists",
@@ -204,7 +111,6 @@ const pages: RouteProps[] = [
     isPrivate: true,
   },
   {
-    Component: Pages.AboutTheAuthor,
     name: "AboutTheAuthor",
     path: "/about-the-author",
     routerName: "goToAboutTheAuthor",
@@ -212,7 +118,6 @@ const pages: RouteProps[] = [
     isPrivate: true,
   },
   {
-    Component: Pages.References,
     name: "References",
     path: "/references",
     routerName: "goToReferences",
